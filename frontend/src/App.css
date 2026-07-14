@@ -1,0 +1,12 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+/* Color de las campas Paciente y Medico */
+.p-dropdow-item:hover {
+  background-color: #0056b3 !important;
+  color: #ffffff !important;
+}

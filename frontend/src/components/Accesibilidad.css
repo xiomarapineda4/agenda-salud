@@ -1,0 +1,276 @@
+/* PANEL DE ACCESIBILIDAD */
+
+
+
+.panel-accesibilidad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    min-width: 165px;
+}
+
+.panel-accesibilidad button {
+    width: 100%;
+    min-width: 150px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #0056b3;
+    color: white;
+    padding: 0 12px;
+    font-size: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.panel-accesibilidad button:hover {
+    background: #003d82;
+}
+
+.panel-accesibilidad .texto {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+
+/* ========================= */
+/* CONTRASTE GLOBAL */
+/* ========================= */
+
+/* Variables y esquema para modo de alto contraste */
+body.contraste-activo {
+    --acc-bg: #FFFFFF;
+    --acc-text: #031a3e;
+    --acc-accent: #e7f736;
+    --acc-muted: #FFFFFF;
+    --acc-button-bg: #e7f736;
+    --acc-button-color: #FFFFFF;
+
+    background: var(--acc-bg) !important;
+    color: var(--acc-text) !important;
+}
+/* Obliga a la targeta y a los campos a usar los cambios */
+body.contraste-activo .card,
+body.contraste-activo [class*"login"] {
+    background-color: var(--ac-muted) !important;
+    border: 2px solid var(--ac-accent) !important;
+}
+body.contraste-activo .p-component.p-inputtext,
+body.contraste-activo .p-dropdown,
+body.contraste-activo .p-inputtext:enabled,
+body.contraste-activo .p-float-label input {
+    background-color: #e7f736 !important;
+    color:  #031a3e!important;
+    border: 1.5px solid #031a3e !important;
+}
+body.contraste-activo .p-float-label label,
+body.contraste-activo .p-placeholder,
+body.contraste-activo .p-dropdown-label,
+body.contraste-activo .p-inputtext::placeholder {
+    color: #031a3e !important;
+    opacity: 1 !important;
+}
+
+body.contraste-activo div[ style*="background-color"] {
+    background-color: var(--acc-muted) !important;
+    border: 2px solid var(--acc-accent) !important;
+}
+
+
+
+
+/* ========================= */
+/* TEXTOS */
+/* ========================= */
+
+body.contraste-activo h1,
+body.contraste-activo h2,
+body.contraste-activo h3,
+body.contraste-activo h4,
+body.contraste-activo h5,
+body.contraste-activo h6,
+body.contraste-activo p,
+body.contraste-activo span,
+body.contraste-activo label,
+body.contraste-activo small {
+    color: var(--acc-text) !important;
+}
+
+
+
+/* ========================= */
+/* BOTONES */
+/* ========================= */
+
+body.contraste-activo button,
+body.contraste-activo .p-button {
+    background: var(--acc-button-bg) !important;
+    color: var(--acc-button-color) !important;
+    border: 2px solid var(--acc-text) !important;
+    box-shadow: none !important;
+    font-weight: 800 !important;
+}
+
+body.contraste-activo button:hover,
+body.contraste-activo .p-button:hover {
+    background: var(--acc-text) !important;
+    color: var(--acc-button-color) !important;
+    border-color: var(--acc-accent) !important;
+}
+
+body.contraste-activo button:hover *,
+body.contraste-activo .p-button:hover * {
+    color: var(--acc-button-color) !important;
+}
+
+
+/* ========================= */
+/* INPUTS, SELECTS Y TEXTAREAS */
+/* ========================= */
+
+body.contraste-activo input,
+body.contraste-activo textarea,
+body.contraste-activo select,
+body.contraste-activo .p-inputtext {
+    background: var(--acc-bg) !important;
+    color: var(--acc-text) !important;
+    border: 2px solid var(--acc-text) !important;
+}
+
+body.contraste-activo input::placeholder,
+body.contraste-activo textarea::placeholder,
+body.contraste-activo .p-inputtext::placeholder {
+    color: var(--acc-muted) !important;
+}
+
+body.contraste-activo input:focus,
+body.contraste-activo textarea:focus,
+body.contraste-activo select:focus,
+body.contraste-activo .p-inputtext:enabled:focus {
+    border-color: var(--acc-accent) !important;
+    box-shadow: 0 0 0 4px rgba(255, 213, 79, 0.25) !important;
+    outline: none !important;
+}
+
+
+/* ========================= */
+/* ENLACES E ICONOS */
+/* ========================= */
+
+body.contraste-activo a {
+    color: var(--acc-accent) !important;
+    text-decoration: underline !important;
+}
+
+body.contraste-activo a:hover {
+    color: var(--acc-text) !important;
+}
+
+body.contraste-activo i,
+body.contraste-activo svg {
+    color: var(--acc-accent) !important;
+    fill: currentColor !important;
+}
+
+
+/* ========================= */
+/* CASOS ESPECIALES */
+/* ========================= */
+
+body.contraste-activo .login-page,
+body.contraste-activo .panel-paciente,
+body.contraste-activo .fondo-pagina-cita {
+    background-image: none !important;
+    background: #000000 !important;
+    background-color: #000000 !important;
+}
+
+body.contraste-activo .login-card {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+body.contraste-activo .pp-avatar {
+    background: var(--acc-accent) !important;
+    color: var(--acc-button-color) !important;
+}
+
+
+/* ========================= */
+/* PANEL DE ACCESIBILIDAD EN CONTRASTE */
+/* ========================= */
+
+body.contraste-activo .panel-accesibilidad {
+    background-color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+
+/* ========================= */
+/* TAMAÑOS DE LETRA GLOBALES */
+/* ========================= */
+
+/* Aumentar/disminuir aplicando clases al elemento <body> desde el componente */
+body.letra-grande *:not(div):not(section):not(main) {
+    font-size: 1.05rem !important;
+    /*line-height: 1.6 !important;*/
+}
+
+body.letra-extra-grande *:not(div):not(section):not(main) {
+    font-size: 1.10rem !important;
+    /*line-height: 1.6 !important;*/
+}
+/* Para mejorar la legibilidad en modo contraste */
+body.contraste-activo, body.letra-grande, body.letra-extra-grande {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enfocar elementos claramente cuando esté activo el modo contraste */
+body.contraste-activo a:focus,
+body.contraste-activo button:focus,
+body.contraste-activo input:focus,
+body.contraste-activo textarea:focus,
+body.contraste-activo select:focus {
+    outline: 3px solid var(--acc-accent) !important;
+    outline-offset: 2px !important;
+}
+
+/* Mejorar el espaciado y áreas clicables en modo accesible */
+body.contraste-activo button,
+body.contraste-activo .p-button,
+body.contraste-activo .panel-accesibilidad button {
+    padding: 12px 16px !important;
+}
+
+/* Reducir animaciones si el usuario las desactiva (prefers-reduced-motion) */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+/* Color de las letras de los campos Botones */
+body.contraste-activo input,
+body.contraste-activo .p-inputtext,
+body.contraste-activo .p-placeholder,
+body.contraste-activo .p-dropdown-label.p-placeholder,
+body.contraste-activo [class*="placeholder"],
+body.contraste-activo input::placeholder,
+body.contraste-activo .p-inputtext::placeholder{
+    color: #2d3748 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+body.contraste-activo .p-inputtext,
+body.contraste-activo input {
+    background-color: #bdd7f4 !important;
+}
